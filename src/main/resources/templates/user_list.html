@@ -10,18 +10,20 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Username</th>
-        <th>Password</th>
+        <th>USER NAME</th>
+        <th>PASSWORD</th>
     </tr>
     </thead>
     <tbody>
-    <!--/*@thymesVar id="publicUsers" type="jakarta"*/-->
-    <tr th:each="publicUser : ${publicUsers}">
-        <td th:text="${user.id}"></td>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.userId}"></td>
         <td th:text="${user.username}"></td>
         <td th:text="${user.password}"></td>
     </tr>
+
     </tbody>
 </table>
 </body>
 </html>
+
+<!--<tr th:each= "publicUser : ${publicUsers}"> -->
